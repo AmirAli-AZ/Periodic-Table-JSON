@@ -11,7 +11,7 @@ PERIODIC_TABLE_JSON = "../PeriodicTableJSON.json"
 PERIODIC_TABLE_SCHEMA = "../schemas/periodicTableJSON.schema"
 
 print(f"Validating {PERIODIC_TABLE_JSON} against {PERIODIC_TABLE_SCHEMA}")
-with open(PERIODIC_TABLE_JSON) as jfile, open(PERIODIC_TABLE_SCHEMA) as sfile:
+with open(PERIODIC_TABLE_JSON, encoding="utf8") as jfile, open(PERIODIC_TABLE_SCHEMA, encoding="utf8") as sfile:
     data = json.load(jfile)
     schema = json.load(sfile)
 # Raises an exception in case of failure

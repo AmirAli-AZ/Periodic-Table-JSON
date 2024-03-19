@@ -10,7 +10,7 @@ PERIODIC_TABLE_CSV = "../PeriodicTableCSV.csv"
 
 # Validate and load data
 from validate_json import PERIODIC_TABLE_JSON
-with open(PERIODIC_TABLE_JSON) as jfile:
+with open(PERIODIC_TABLE_JSON, encoding="utf8") as jfile:
     jdata = json.load(jfile)["elements"]
 
 # Normalize and save to CSV
